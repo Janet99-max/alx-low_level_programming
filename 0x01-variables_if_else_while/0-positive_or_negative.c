@@ -1,9 +1,11 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
+
 /**
- * main - our entry point
- * Return: always 0 (success)
+ *main - Entry point
+ *
+ *Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -11,11 +13,15 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
+
+	printf("%d is ", n);
+
 	if (n > 0)
-		printf("%d n is positive\n", n);
+		printf("positive\n");
 	else if (n == 0)
-		printf("%d is 0\n", n);
+		printf("zero\n");
 	else
-		printf("%d is negative\n", n);
+		printf("negative\n");
+
 	return (0);
 }
